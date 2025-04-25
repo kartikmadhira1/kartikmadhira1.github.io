@@ -1,22 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Kartik's Blog</title>
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    body { font-family: sans-serif; padding: 2em; }
+    .post-link { cursor: pointer; color: blue; text-decoration: underline; display: block; margin: 0.5em 0; }
+    #content { margin-top: 2em; }
+  </style>
 </head>
 <body>
+  <h1>My Blog</h1>
 
+  <!-- Blog post links -->
+  <div id="posts">
+    <span class="post-link" data-src="posts/post1.md">Post 1: My First Blog</span>
+    <span class="post-link" data-src="posts/post2.md">Post 2: Tips & Tricks</span>
+    <span class="post-link" data-src="posts/post3.md">Post 3: Project Deep Dive</span>
+  </div>
 
-  <section id="blog-posts" class="container">
-    <ul>
-      <li><a href="https://www.techspirityou.blogspot.com">Visit my Blogger for full blog posts</a></li>
-      <!-- Add more internal blog post entries if needed -->
-    </ul>
-  </section>
+  <!-- Blog content will load here -->
+  <div id="content"></div>
 
-  <footer>
-    <p>&copy; Kartik Madhira</p>
-  </footer>
+  <script>
+    document.querySelectorAll('.post-link').forEach(link => {
+      link.addEventListener('click', () => {
+        fetch(link.dataset.src)
+          .then(res => res.text())
+          .then(md => {
+            document.getElementById('content').innerHTML = marked.parse(md);
+            window.scrollTo(0, 0);
+          });
+      });
+    });
+  </script>
 </body>
 </html>
