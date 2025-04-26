@@ -1,10 +1,9 @@
 ---
-title: "About"
+title: "About Me"
 permalink: "/about/"
 layout: page
 ---
 
-## About me 
 
 
 
@@ -15,11 +14,9 @@ Before joining Innovasea, I was a Robotics Engineering Masters student at the Un
 My work in the industry and academia includes an overlap of : Vision based Depth, Visual Odometry, Object Segmentation, Object Detection and Tracking, Visual SLAM, Structure from Motion (SfM), Lidar-Camera calibration and Sensor Fusion.
 I did my undergrad in Instrumentation and Control Engineering at Nirma University, Ahmedabad where I worked with Prof. Sandip Mehta and Dr. Dilip Kothari.
 
-
-
 <p align="center">
-  <img src="_data/kartik.png" alt="Alt Text" width="200"/>
-</p>V
+  <img src="./_data/kartik.png" alt="Alt Text" width="200"/>
+</p>
 
 
 <!-- Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
