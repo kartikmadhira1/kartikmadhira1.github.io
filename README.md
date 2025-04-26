@@ -4,9 +4,25 @@ permalink: "/about/"
 layout: page
 ---
 
-## Installation
+## About me 
 
-Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
+
+
+I am a Computer Vision Engineer working on perception related problems at Innovasea Systems.
+
+Before joining Innovasea, I was a Robotics Engineering Masters student at the University of Maryland, College Park. My interests lie at the intersection of the fields of vision and lidar-based perception for Robotics. At UMD, I was a Research Assistant in the Robotics Algorithms and Autonomous Systems Lab at the University of Maryland, advised by Dr. Pratap Tokekar. I worked on implementing robust perception pipeline for the precise mapping of bridges from UAVs.
+
+My work in the industry and academia includes an overlap of : Vision based Depth, Visual Odometry, Object Segmentation, Object Detection and Tracking, Visual SLAM, Structure from Motion (SfM), Lidar-Camera calibration and Sensor Fusion.
+I did my undergrad in Instrumentation and Control Engineering at Nirma University, Ahmedabad where I worked with Prof. Sandip Mehta and Dr. Dilip Kothari.
+
+
+
+<p align="center">
+  <img src="_data/kartik.png" alt="Alt Text" width="200"/>
+</p>V
+
+
+<!-- Just fork this [repository](https://github.com/niklasbuschmann/contrast) and adjust the `_config.yml` to use with [Github Pages](https://pages.github.com/) and your page is done.
 
 ## Features
 
@@ -96,4 +112,4 @@ Contrast comes preinstalled with a leightweight alternative to MathJax called [K
 
 ![screenshot](https://user-images.githubusercontent.com/4943215/109431832-b6cac080-7a08-11eb-9c5e-a058680c23a1.png)
 
-![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png)
+![screenshot](https://user-images.githubusercontent.com/4943215/73125194-5f0b8b80-3fa4-11ea-805c-8387187503ad.png) -->
