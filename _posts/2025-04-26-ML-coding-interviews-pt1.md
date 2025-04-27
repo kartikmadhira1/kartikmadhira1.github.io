@@ -42,6 +42,7 @@ points = [(2,7,3), (3,6,2), (6,12,1), (9,1,7), (13,15,6), (17,15,13)]
 
 
 
+For building the Kd-tree:
 
 
 {% highlight python %}
@@ -60,8 +61,6 @@ class KdNode:
 
 def build_kdtree(points, depth=0):
 
-
-    # assuming that points here is already sorted for previous root
     if not points:
         return
     sorted_list = sorted(points, key=lambda x: x[depth%3])
@@ -79,3 +78,60 @@ def build_kdtree(points, depth=0):
 {% endhighlight %}
 
 The overall time complexity of building a KD-tree is O(n log n).
+
+
+Clustering:
+
+{% highlight python %}
+def get_euclid_dist(root, query_point):
+
+    return math.sqrt((root.x - query_point.x)**2 + (root.y - query_point.y)**2 + (root.z - query_point.z)**2)
+
+
+
+def cluster(root, query_point, visit_map, cluster_id, depth, radius=2):
+    if root in visit_map:
+        cluster(root.left, query_point, visit_map, cluster_id, depth+1)
+        cluster(root.right, query_point, visit_map, cluster_id, depth+1)
+    else:
+        dist = get_euclid_dist(root, query_point)
+        visit_map.add(root.tuple)
+        if  dist < radius:
+            root.cluster_id = cluster_id
+    
+    axis = depth%3
+    diff = query_point.tuple[axis] - root.tuple[axis]
+
+    # search on left if the initial crossing is on left
+    if diff <=0:
+        cluster(root.left, query_point, visit_map, cluster_id, depth+1, radius)
+    else:
+        cluster(root.right, query_point, visit_map, cluster_id, depth+1, radius)
+
+    
+    # if diff is less than the radius search on the other side
+    if abs(diff) <= radius:
+        if diff <=0:
+            cluster(root.right, query_point, visit_map, cluster_id, depth+1, radius)
+        else:
+            cluster(root.left, query_point, visit_map, cluster_id, depth+1, radius)
+
+
+
+cluster_id = 0
+def euclid_cluster(root, points):
+
+    for each_point in points:
+
+        if each_point in visit_map:
+            continue
+        else:
+            query_point = KdNode(each_point)
+            cluster(root, each_point, visit_map, cluster_id)
+            cluster_id+=1
+
+
+{% endhighlight %}
+
+
+In my opinion, either of these are definitely a 45-60 minute interview questions, not both.
