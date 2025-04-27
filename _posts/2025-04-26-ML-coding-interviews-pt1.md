@@ -45,12 +45,37 @@ points = [(2,7,3), (3,6,2), (6,12,1), (9,1,7), (13,15,6), (17,15,13)]
 
 
 {% highlight python %}
+# randomly generate a list of 3d points, 3d points in tuple
 
-class kdtree:
-    def __init__(self, leaf)
-        pass
+points = [(random.randint(0, 20), random.randint(0, 20), random.randint(0, 20)) for _ in range(10)]
 
-    def euclid_clustering(self):
-        pass
+class KdNode:
+    def __init__(self, xyz_tuple):
+        self.x = xyz_tuple[0]
+        self.y = xyz_tuple[1]
+        self.z = xyz_tuple[2]
+        self.left = None
+        self.right = None
+
+
+def build_kdtree(points, depth=0):
+
+
+    # assuming that points here is already sorted for previous root
+    if not points:
+        return
+    sorted_list = sorted(points, key=lambda x: x[depth%3])
+    
+    middle_idx = len(points)//2
+    median_val = points[middle_idx]
+
+    node = KdNode(median_val)
+
+    node.left = build_kdtree(points[:middle_idx], depth+1)
+    node.right = build_kdtree(points[middle_idx+1:], depth+1)
+
+    return node
+
 {% endhighlight %}
 
+The overall time complexity of building a KD-tree is O(n log n).
