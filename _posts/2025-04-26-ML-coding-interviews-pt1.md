@@ -175,4 +175,4 @@ def ransac_pseudo(points, threshold):
 
 {% endhighlight %}
 
-For a primer of plane equations and basics, you can see them [here.](../_data/post1/Ransac.pdf)
+For a primer of plane equations and basics, you can see them [here.](https://github.com/kartikmadhira1/kartikmadhira1.github.io/blob/master/_data/post1/Ransac.pdf)
