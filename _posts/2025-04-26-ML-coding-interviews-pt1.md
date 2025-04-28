@@ -135,3 +135,43 @@ def euclid_cluster(root, points):
 
 
 In my opinion, either of these are definitely a 45-60 minute interview questions, not both.
+
+
+
+# Question: Given a set of 3D points with random gaussian noise, fit a plane.
+
+This question screams of RANSAC. At this point, if you have a CV background you must have encountered RANSAC in some form. This is a pretty robust outlier rejection method. The last I had implemented one was back in 2018, 7 years back and I got asked this a few months ago with a slight catch - fit a plane instead of a line. 
+
+
+
+{% highlight python %}
+
+points = [(2,7,3), (3,6,2), (6,12,1), (9,1,7), (13,15,6), (17,15,13)]
+
+def ransac_pseudo(points, threshold):
+
+    
+    best_fit_plane = None
+    max_points = -1e18
+   
+    for n iterations:
+        #get 3 random points and fit a plabe
+        rand_3_points = random(points)
+        curr_plane = fit_plane(rand_3_points)
+        
+        # check the dist to the plane for each point,
+        #if less than threshold, include in set
+        
+        agreed_points = 0
+        for each_point in points:
+            dist = dist_to_plane(each_point, curr_plane)
+            if dist < threshold:
+                agreed_points +=1
+
+        if agreed_points > max_points:
+            best_fit_plane = curr_plane
+            max_points = agreed_points 
+
+
+{% endhighlight %}
+
