@@ -8,9 +8,8 @@ categories: media
 Over the past 7 years, I have had the chance to give multiple interviews for the computer vision and machine learning roles. This post is to delve down into the common questions asked in these interviews. These are in general 45-60 minute interviews asked with a real world problem in mind. 
 
 
-## Point cloud clustering
 
-Question - You are given a sample of n 3D point cloud points. Write a program to cluster the points points into clusterd objects.
+# Question - You are given a sample of n 3D point cloud points. Write a program to cluster the points points into clusterd objects.
 
 One way to think of this question is to ask - how are these points built? Is there a special pattern about them? Clustering can be the easy part - We build a k-means cluster or do a euclidean cluster. But for that we will need an efficient way to access the neighbours for each of the points. How do we do that?
 

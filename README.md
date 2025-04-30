@@ -15,7 +15,7 @@ My work in the industry and academia includes an overlap of : Vision based Depth
 I did my undergrad in Instrumentation and Control Engineering at Nirma University, Ahmedabad where I worked with Prof. Sandip Mehta and Dr. Dilip Kothari.
 
 <p align="center">
-  <img src="./_data/kartik.png" alt="" width="200"/>
+  <img src="_data/kartik.png" alt="" width="200"/>
 </p>
 
 
