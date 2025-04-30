@@ -4,22 +4,36 @@ title: "Home"
 ---
 
 
+---
+layout: default
+title: "Home"
+---
+
+{% if site.show_excerpts %}
+  {% include home.html %}
+{% else %}
+  {% include archive.html title="Posts" %}
+{% endif %}
+
 <hr>
 
-<h2>About Me</h2>
+<div style="max-width: 800px; margin: 0 auto; padding: 1rem;">
 
-<p>I am a Computer Vision Engineer working on perception related problems at Innovasea Systems.</p>
+  <h2>About Me</h2>
 
-<p>Before joining Innovasea, I was a Robotics Engineering Masters student at the University of Maryland, College Park. My interests lie at the intersection of the fields of vision and lidar-based perception for Robotics. At UMD, I was a Research Assistant in the Robotics Algorithms and Autonomous Systems Lab at the University of Maryland, advised by Dr. Pratap Tokekar. I worked on implementing robust perception pipeline for the precise mapping of bridges from UAVs.</p>
+  <p>I am a Computer Vision Engineer working on perception related problems at Innovasea Systems.</p>
 
-<p>My work in the industry and academia includes an overlap of: Vision based Depth, Visual Odometry, Object Segmentation, Object Detection and Tracking, Visual SLAM, Structure from Motion (SfM), Lidar-Camera calibration and Sensor Fusion.</p>
+  <p>Before joining Innovasea, I was a Robotics Engineering Masters student at the University of Maryland, College Park. My interests lie at the intersection of the fields of vision and lidar-based perception for Robotics. At UMD, I was a Research Assistant in the Robotics Algorithms and Autonomous Systems Lab at the University of Maryland, advised by Dr. Pratap Tokekar. I worked on implementing robust perception pipeline for the precise mapping of bridges from UAVs.</p>
 
-<p>I did my undergrad in Instrumentation and Control Engineering at Nirma University, Ahmedabad where I worked with Prof. Sandip Mehta and Dr. Dilip Kothari.</p>
+  <p>My work in the industry and academia includes an overlap of: Vision based Depth, Visual Odometry, Object Segmentation, Object Detection and Tracking, Visual SLAM, Structure from Motion (SfM), Lidar-Camera calibration and Sensor Fusion.</p>
 
-<p align="center">
-  <img src="_data/kartik.png" alt="Kartik Madhira" width="200"/>
-</p>
+  <p>I did my undergrad in Instrumentation and Control Engineering at Nirma University, Ahmedabad where I worked with Prof. Sandip Mehta and Dr. Dilip Kothari.</p>
 
+  <p align="center">
+    <img src="_data/kartik.png" alt="Kartik Madhira" width="200"/>
+  </p>
+
+</div>
 
 {% if site.show_excerpts %}
   {% include home.html %}
