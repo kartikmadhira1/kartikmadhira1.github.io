@@ -15,9 +15,9 @@ minimal: false             # use a dark header
 
 # Menu
 
-navigation:     
+navigation:
+  - {file: "index.html"   
   - {file: "README.md"}        # accepts {file, title, url, icon, sidebaricon}
-  - {file: "index.html"}
 
 external:                  # shows a footer with social links - for available icons see fontawesome.com/icons
   - {title: Github, icon: github, url: "https://github.com/kartikmadhira1"}
