@@ -1,5 +1,5 @@
 ---
-title:  "Computer Vision/Machine Learning coding interviews Part-1"
+title:  "Computer Vision/Machine Learning coding interviews Part-2"
 mathjax: true
 layout: post
 categories: media
